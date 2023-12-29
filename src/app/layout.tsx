@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { fontBody, fontCode, fontHead } from './fonts'
-import './css-reset.css'
-import './globals.css'
+import './styles/css-reset.css'
+import './styles/globals.css'
+import './styles/hero.css'
 
 export const metadata: Metadata = {
   title: process.env.SITE_TITLE,

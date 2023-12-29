@@ -1,0 +1,33 @@
+
+:root {
+    --hero-inset-shadow: inset 0px 0px 30px rgb(0, 0, 0);
+    --hero-wave-shadow: 0px -5px 20px rgba(0, 0, 0, 0.4);
+    --hero-text-shadow: 1px 1px 7px rgb(0, 0, 0);
+    --hero-main-title-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#hero {
+    /* background-image: url('https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+    background-image: url('https://images.unsplash.com/photo-1621146027714-e8921770f8d0?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: var(--hero-inset-shadow);
+    text-shadow: var(--hero-text-shadow);
+    @apply h-screen static z-0;
+}
+
+#hero h1 {
+    text-shadow: var(--hero-main-title-shadow);
+    @apply z-10;
+}
+
+#heroWave {
+    @apply absolute bottom-0 left-0;
+}
+
+#heroWave path {
+    fill: var(--page-bkg-color) !important;
+    /* FIXME: This won't do with dark/light modes - can I use Tailwind defaults?*/
+    filter: drop-shadow(var(--hero-wave-shadow));
+}
