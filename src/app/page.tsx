@@ -1,30 +1,34 @@
 import BalancedHeading from "@/components/BalancedHeading";
 
 export default function Home() {
+  const {SITE_TITLE, SITE_DESCRIPTION} = process.env;
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <main>
-      <BalancedHeading>Title of the website</BalancedHeading>
+      <BalancedHeading>{SITE_TITLE || 'Untitled'}</BalancedHeading>
+      <p>{SITE_DESCRIPTION || 'No description provided'}</p>
       <section>
         <p>{`
-        The pungent aroma of cigarette smoke hung heavy in the air of Tony Piturro's dimly lit living room.
-        Tony slouched on his worn-out couch, absentmindedly tapping his fingers on the armrest.
-        Suddenly, his eccentric neighbor burst through the front door, carrying a small, peculiar-looking creature.
-        "What the heck is that?" Tony exclaimed, eyeing the creature with disbelief.
-        "It's a wombat!" his neighbor declared proudly, his eyes shining with excitement.
-        Tony furrowed his brow. "That's not a wombat. That's a dog."
-        His neighbor shook his head fervently. "No, no, it's a wombat! I found it in my backyard. It was making these strange noises, like *grumph grumph*."
-        Tony rolled his eyes. "A wombat doesn't make *grumph grumph* noises. It's a dog, alright. And it looks like it's hungry."
-        The creature let out a pitiful whine, its round, black eyes pleading for food.
-        "Fine," Tony sighed, reaching for a dog treat from the ashtray on the coffee table. As the creature devoured the treat, Tony couldn't help but chuckle at the absurdity of the situation. "Well, I guess we've got ourselves a wombat-dog now."
-        His neighbor beamed. "Exactly! A wombat-dog!"
-  `}</p>
+          The pungent aroma of cigarette smoke hung heavy in the air of Tony Piturro's dimly lit living room.
+          Tony slouched on his worn-out couch, absentmindedly tapping his fingers on the armrest.
+          Suddenly, his eccentric neighbor burst through the front door, carrying a small, peculiar-looking creature.
+          "What the heck is that?" Tony exclaimed, eyeing the creature with disbelief.
+          "It's a wombat!" his neighbor declared proudly, his eyes shining with excitement.
+          Tony furrowed his brow. "That's not a wombat. That's a dog."
+          His neighbor shook his head fervently. "No, no, it's a wombat! I found it in my backyard. It was making these strange noises, like *grumph grumph*."
+          Tony rolled his eyes. "A wombat doesn't make *grumph grumph* noises. It's a dog, alright. And it looks like it's hungry."
+          The creature let out a pitiful whine, its round, black eyes pleading for food.
+          "Fine," Tony sighed, reaching for a dog treat from the ashtray on the coffee table. As the creature devoured the treat, Tony couldn't help but chuckle at the absurdity of the situation. "Well, I guess we've got ourselves a wombat-dog now."
+          His neighbor beamed. "Exactly! A wombat-dog!"
+        `}</p>
       </section>
+
       <section>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur neque sequi saepe consequatur totam, adipisci corrupti, alias error placeat laborum aliquam aliquid suscipit maxime cupiditate accusantium enim eius, ut repellat!
         Distinctio illum repudiandae ea natus necessitatibus nihil, qui eos aliquid omnis beatae. Alias, fuga blanditiis est facilis quas hic quia, porro nemo enim sint impedit accusamus, quisquam illum veniam tenetur.
         Optio quo blanditiis est consequuntur quasi animi perspiciatis debitis error commodi nostrum porro amet eos quod vel aspernatur quidem officiis neque iusto, reprehenderit dolores veniam deserunt soluta quaerat ipsa. Cumque?</p>
       </section>
+
       <section>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam sapiente impedit enim architecto animi veritatis facilis aut obcaecati ipsa. Quidem quibusdam nulla dignissimos, repudiandae optio possimus beatae voluptates deleniti?
         Optio quidem nulla explicabo saepe nam dolores minus quasi tempora? Praesentium mollitia quam nobis recusandae similique nesciunt corrupti amet. Nam odio minus natus, ullam modi incidunt magni tenetur mollitia vitae.

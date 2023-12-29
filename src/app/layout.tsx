@@ -4,8 +4,8 @@ import './css-reset.css'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Next Website',
-  description: 'A template by Web Design Pablo Juele',
+  title: process.env.SITE_TITLE,
+  description: process.env.SITE_DESCRIPTION,
 }
 
 export default function RootLayout({

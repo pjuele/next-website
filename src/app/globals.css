@@ -5,7 +5,7 @@
 html {
     @apply font-body;
     @apply text-base;
-    @apply p-5;
+    @apply p-10;
     @apply bg-cyan-50;
 }
 
