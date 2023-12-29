@@ -27,7 +27,8 @@
 }
 
 #heroWave path {
-    fill: var(--page-bkg-color) !important;
+    fill: var(--background) !important;
+    /* fill: var(--page-bkg-color) !important; */
     /* FIXME: This won't do with dark/light modes - can I use Tailwind defaults?*/
     filter: drop-shadow(var(--hero-wave-shadow));
 }
