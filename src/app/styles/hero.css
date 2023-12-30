@@ -1,34 +1,62 @@
 
-:root {
-    --hero-inset-shadow: inset 0px 0px 30px rgb(0, 0, 0);
-    --hero-wave-shadow: 0px -5px 20px rgba(0, 0, 0, 0.4);
-    --hero-text-shadow: 1px 1px 7px rgb(0, 0, 0);
-    --hero-main-title-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
+@tailwind base;
 
+/*
+https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+https://images.unsplash.com/photo-1621146027714-e8921770f8d0?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+https://plus.unsplash.com/premium_photo-1698843275177-670fd3d889db?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D
+https://plus.unsplash.com/premium_photo-1686674815015-20171905e0cb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww
+https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww
+https://images.unsplash.com/photo-1549241520-425e3dfc01cb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGxpZ2h0JTIwYXJ0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D
+*/
+
+    @layer base {
+    :root {
+        --hero-inset-shadow: inset 0px 0px 30px rgb(0, 0, 0);
+        --hero-wave-shadow: 0px -5px 20px rgba(0, 0, 0, 0.4);
+        --hero-text-shadow: 1px 1px 7px rgb(0, 0, 0);
+        --hero-main-title-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        --hero-back-image-url: url('https://images.unsplash.com/photo-1549241520-425e3dfc01cb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGxpZ2h0JTIwYXJ0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
+    }
+       
+    .dark {
+        --hero-inset-shadow: inset 0px 0px 30px rgb(0, 0, 0);
+        --hero-wave-shadow: 0px -5px 20px rgba(0, 0, 0, 0.4);
+        --hero-text-shadow: 1px 1px 7px rgb(0, 0, 0);
+        --hero-main-title-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        --hero-back-image-url: url('https://plus.unsplash.com/premium_photo-1686674815015-20171905e0cb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+    }
+  }
+   
 #hero {
-    /* background-image: url('https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-    background-image: url('https://images.unsplash.com/photo-1621146027714-e8921770f8d0?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: var(--hero-back-image-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: var(--hero-inset-shadow);
     text-shadow: var(--hero-text-shadow);
-    @apply h-screen static z-0;
+    @apply relative h-screen w-full z-0;
+    @apply overflow-hidden;
+    @apply text-white dark:text-gray-300;
+}
+
+#hero #feature {
+    @apply h-2/3 flex flex-col items-center justify-center;
 }
 
 #hero h1 {
     text-shadow: var(--hero-main-title-shadow);
-    @apply z-10;
+    @apply z-10 text-6xl md:text-8xl xl:text-9xl font-extrabold;
 }
 
 #heroWave {
-    @apply absolute bottom-0 left-0;
+    @apply w-[100%] absolute bottom-0 left-0;
+    max-height: 40vh;
+    min-height: 30vh;
+    min-width: 100%;
 }
 
 #heroWave path {
-    fill: var(--background) !important;
-    /* fill: var(--page-bkg-color) !important; */
-    /* FIXME: This won't do with dark/light modes - can I use Tailwind defaults?*/
+    fill: hsl(var(--background)) !important;
     filter: drop-shadow(var(--hero-wave-shadow));
 }

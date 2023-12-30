@@ -1,4 +1,4 @@
-import BalancedHeading from "@/components/BalancedHeading";
+import BalancedHeading from "@/components/balanced-heading";
 import Balancer from "react-wrap-balancer";
 
 export default function Home() {
@@ -7,14 +7,17 @@ export default function Home() {
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <main>
       <div id="hero">
-        <div  className="text-white p-20">
-          <h1 className="text-8xl font-extrabold">
+        <div id="feature" className="text-center md:text-left p-5 md:p-20">
+          <h1>
             <Balancer>{SITE_TITLE || 'Untitled'}</Balancer>
           </h1>
-          <p>{SITE_DESCRIPTION || 'No description provided'}</p>
+          <p className="text-center md:text-start">
+            <Balancer>{SITE_DESCRIPTION || 'No description provided'}</Balancer>
+          </p>
         </div>
+
         <svg id="heroWave"
-          viewBox="20 0 900 400" width="auto" height="auto"
+          viewBox="20 0 900 540" preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg" version="1.1">
           <path d="M0 364L22.8 361.3C45.7 358.7 91.3 353.3 137 367.8C182.7 382.3 228.3 416.7 274 417C319.7 417.3 365.3 383.7 411.2 385.5C457 387.3 503 424.7 548.8 429.8C594.7 435 640.3 408 686 392.5C731.7 377 777.3 373 823 374C868.7 375 914.3 381 937.2 384L960 387L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z"/>
         </svg>
