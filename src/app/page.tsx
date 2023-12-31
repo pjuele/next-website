@@ -23,7 +23,7 @@ export default function Home() {
         </svg>
       </div>
 
-      <section>
+      <section id="s1">
         <BalancedHeading h={1}>The Story</BalancedHeading>
         <p>{`
           The pungent aroma of cigarette smoke hung heavy in the air of Tony Piturro's dimly lit living room.
@@ -38,14 +38,13 @@ export default function Home() {
           "Fine," Tony sighed, reaching for a dog treat from the ashtray on the coffee table. As the creature devoured the treat, Tony couldn't help but chuckle at the absurdity of the situation. "Well, I guess we've got ourselves a wombat-dog now."
           His neighbor beamed. "Exactly! A wombat-dog!"
         `}</p>
+      </section>
 
+      <section id="s2">
         <BalancedHeading h={2}>And now some latin stuff</BalancedHeading>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur neque sequi saepe consequatur totam, adipisci corrupti, alias error placeat laborum aliquam aliquid suscipit maxime cupiditate accusantium enim eius, ut repellat!
         Distinctio illum repudiandae ea natus necessitatibus nihil, qui eos aliquid omnis beatae. Alias, fuga blanditiis est facilis quas hic quia, porro nemo enim sint impedit accusamus, quisquam illum veniam tenetur.
         Optio quo blanditiis est consequuntur quasi animi perspiciatis debitis error commodi nostrum porro amet eos quod vel aspernatur quidem officiis neque iusto, reprehenderit dolores veniam deserunt soluta quaerat ipsa. Cumque?</p>
-      </section>
-
-      <section>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam sapiente impedit enim architecto animi veritatis facilis aut obcaecati ipsa. Quidem quibusdam nulla dignissimos, repudiandae optio possimus beatae voluptates deleniti?
         Optio quidem nulla explicabo saepe nam dolores minus quasi tempora? Praesentium mollitia quam nobis recusandae similique nesciunt corrupti amet. Nam odio minus natus, ullam modi incidunt magni tenetur mollitia vitae.
         Cum cupiditate quis minus adipisci aliquid optio sunt culpa repudiandae sequi facilis! Eos, nisi. Ullam neque omnis quas! Corrupti quaerat sed atque amet non soluta dignissimos, quas velit rerum enim!

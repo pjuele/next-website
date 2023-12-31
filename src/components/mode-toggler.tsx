@@ -16,9 +16,10 @@ export function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
+    // <div className="bg-background text-foreground rounded-lg shadow-lg">
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="default" size="icon" className="text-background dark:text-foreground hover:dark:text-background">
+        <Button variant="ghost" size="icon">
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
@@ -36,5 +37,6 @@ export function ModeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+    // </div>
   )
 }

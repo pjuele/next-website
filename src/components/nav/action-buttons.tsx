@@ -13,10 +13,12 @@ export default function ActionButtons() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="default" size="icon" className="text-background dark:text-foreground hover:dark:text-background">
+        {/* <div className="bg-background text-foreground rounded-lg shadow-lg"> */}
+        <Button variant="ghost" color="primary" size="icon" className="flex lg:hidden">
           <LuAlignJustify className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all"/>
           <span className="sr-only">Open menu</span>
         </Button>
+        {/* </div> */}
       </SheetTrigger>
       <SheetContent>
         {navData.map((item) => (
